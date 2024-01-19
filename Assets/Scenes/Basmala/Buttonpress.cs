@@ -10,7 +10,8 @@ public class Buttonpress : MonoBehaviour
     private bool ready = true;
 
     [Tooltip("Action to take when button is pressed")]
-    public UnityEvent OnPress;
+
+    //public UnityEvent OnPress;
 
     private Vector3 nextPosition;
     private Vector3 targetPosition;
@@ -46,10 +47,10 @@ public void OnHit()
         // Swap target- and next position
         (nextPosition, targetPosition) = (targetPosition, nextPosition);
 
-        // Run whatever action has been configured in the editor
-        OnPress.Invoke();
-
         Debug.Log("Button is pressed!");
+        
+        // Run whatever action has been configured in the editor
+        //OnPress.Invoke();
 
     }
 }
