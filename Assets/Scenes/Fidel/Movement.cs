@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
         trueSpeed = walkSpeed;
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -99,11 +99,11 @@ public class Movement : MonoBehaviour
         //Animation
         if (direction.magnitude <= 0)
         {
-            PlayerAnimator.SetBool("Moving", false);
+            //PlayerAnimator.SetBool("Moving", false);
         }
         else
         {
-            PlayerAnimator.SetBool("Moving", true);
+            //PlayerAnimator.SetBool("Moving", true);
         }
 
     }
