@@ -18,24 +18,17 @@ public class PickupAndDrop : MonoBehaviour
         {
             if (objectGrabble == null)
             {
-                //Not carrying an object, try to grab
+                // Not carrying an object, try to grab
                 if (Physics.Raycast(lookDir.position, lookDir.forward, out RaycastHit raycastHit, pickUpDistance, pickUpLayerMask))
                 {
-                    if (raycastHit.transform.TryGetComponent(out ObjectGrabble objectGrabble))
+                    if (raycastHit.transform.TryGetComponent(out ObjectGrabble grabbedObject))
                     {
+                        objectGrabble = grabbedObject;  // Use the class-level variable, not a new variable with the same name
                         objectGrabble.Grab(objectGrabPointTransform);
                     }
                 }
-                else
-                {
-                    UnityEngine.Debug.Log("Cannot grab this object");
-                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            // Currently carrying something, drop it
-            if (objectGrabble != null)
+            else
             {
                 objectGrabble.Drop();
                 objectGrabble = null;
