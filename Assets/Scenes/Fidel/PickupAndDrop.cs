@@ -6,7 +6,7 @@ using UnityEngine;
 public class PickupAndDrop : MonoBehaviour
 {
     [SerializeField] private Transform lookDir;
-    [SerializeField] private Transform ObjectGrabPointTransform;
+    [SerializeField] private Transform objectGrabPointTransform;
     [SerializeField] float pickUpDistance = 2.0f;
     [SerializeField] private LayerMask pickUpLayerMask;
     private void Update()
@@ -17,7 +17,9 @@ public class PickupAndDrop : MonoBehaviour
             {
                 if (raycastHit.transform.TryGetComponent(out ObjectGrabble objectGrabble))
                 {
+                    objectGrabble.Grab(objectGrabPointTransform);
                     UnityEngine.Debug.Log(objectGrabble);
+
                 }
             }
         }
