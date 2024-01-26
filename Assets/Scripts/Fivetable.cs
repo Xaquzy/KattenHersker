@@ -5,13 +5,19 @@ using UnityEngine;
 
 public class Fivetable : MonoBehaviour
 {
-    GameObject TheNumber = GameObject.FindWithTag("Number");
+    private GameObject TheNumber;
 
- 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        TheNumber = GameObject.FindWithTag("Number");
+
+        if (TheNumber == null)
+        {
+            Debug.LogError("GameObject with tag 'Number' not found.");
+        }
+
     }
 
     // Update is called once per frame
