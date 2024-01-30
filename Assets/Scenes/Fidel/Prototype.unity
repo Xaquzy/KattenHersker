@@ -1643,6 +1643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 369691939}
   - component: {fileID: 369691940}
+  - component: {fileID: 369691941}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -1773,6 +1774,36 @@ MonoBehaviour:
   - {fileID: 530543254}
   - {fileID: 921212226}
   - {fileID: 1593031693}
+--- !u!114 &369691941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369691938}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 119
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 1
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &380899611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,7 +2576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530543252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018189587, y: -0, z: -0.000000074505806, w: 0.9998346}
+  m_LocalRotation: {x: 0.01818955, y: -0, z: 0.000000029802322, w: 0.99983466}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6946,7 +6977,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -7510,7 +7541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593031691}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.018141478, y: -0, z: -0, w: 0.9998355}
+  m_LocalRotation: {x: -0.018141411, y: 0.000000029802322, z: -0.000000059604645, w: 0.9998355}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9150,32 +9181,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797928483}
   m_Mesh: {fileID: -5360083837896438134, guid: 5d2bd7e37236b4905ad20b305f537742, type: 3}
---- !u!1 &1806146406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 502d955210fa045e38d2f3ecad720d9d, type: 3}
-  m_PrefabInstance: {fileID: 2026331452}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1806146408
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806146406}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1807007885
 GameObject:
   m_ObjectHideFlags: 0
@@ -10417,7 +10422,7 @@ PrefabInstance:
     - target: {fileID: -678588488315902003, guid: 502d955210fa045e38d2f3ecad720d9d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6375970bcf35c2348a23cf485f53ba3e, type: 2}
+      objectReference: {fileID: 2100000, guid: fdac9329a24d04d4583472b929566af4, type: 2}
     - target: {fileID: 919132149155446097, guid: 502d955210fa045e38d2f3ecad720d9d, type: 3}
       propertyPath: m_Name
       value: Jail
@@ -10429,10 +10434,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 502d955210fa045e38d2f3ecad720d9d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1806146408}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502d955210fa045e38d2f3ecad720d9d, type: 3}
 --- !u!1001 &2028780871
 PrefabInstance:
