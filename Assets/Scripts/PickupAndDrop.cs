@@ -16,7 +16,22 @@ public class PickupAndDrop : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-
+            if (objectGrabble == null)
+            //Not carrying an object, try to grab
+            {
+                if(Physics.Raycast(lookDir.position, lookDir.forward, out RaycastHit raycastHit, pickUpDistance, pickUpLayerMask))
+                {
+                    if(raycastHit.transform.TryGetComponent(out objectGrabble))
+                    {
+                        objectGrabble.Grab(objectGrabPointTransform);
+                    }
+                }         
+            }
+            else
+            {
+                objectGrabble.Drop();
+                objectGrabble = null;
+            }
         }
     }
 }
