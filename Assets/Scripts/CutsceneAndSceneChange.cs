@@ -10,6 +10,7 @@ public class CutsceneAndSceneChange : MonoBehaviour
     public GameObject key;
     public Camera cutsceneCam;
     [SerializeField] private float CutSceneTime = 3f;
+    [SerializeField] AudioSource dialog;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,14 +21,16 @@ public class CutsceneAndSceneChange : MonoBehaviour
                 cutsceneCam.enabled = true;
                 player.SetActive(false);
                 key.SetActive(false);
+                //Play animation of the cutscene
+                dialog.Play();
                 StartCoroutine(FinishCut());
             }
 
             //Scenechange after 10s of cut scene
             IEnumerator FinishCut()
             {
+                
                 yield return new WaitForSeconds(CutSceneTime);
-                //Play animation
                 SceneManager.LoadScene(1);
                 
             }
