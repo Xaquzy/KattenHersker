@@ -20,6 +20,7 @@ public class PickupAndDrop : MonoBehaviour
             if (objectGrabble == null)
             //Not carrying an object, try to grab
             {
+
                 //Eye Height
                 if(Physics.Raycast(lookDir.position, lookDir.forward, out RaycastHit raycastHit, pickUpDistance, pickUpLayerMask))
                 {
