@@ -20,7 +20,7 @@ public class Trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger entered by: " + other.name);
-        if (other.CompareTag("TheKey"))
+        if (other.CompareTag("Trigger"))
         {
             Debug.Log("Something opened... YAAAYY FINALLY");
             // kald på den funktion der åbner døren

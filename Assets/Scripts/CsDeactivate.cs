@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,26 @@ using UnityEngine;
 public class CsDeactivate : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public static CsDeactivate Instance;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Movement movement;
+    [SerializeField] private CinemachineFreeLook freelookcam;
+    private void Awake()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Activate()
     {
-        
+        player.SetActive(true);
+        movement.enabled = true;
+        freelookcam.enabled = true;
+    }
+
+    public void Deactivate()
+    {
+        player.SetActive(false);
+        movement.enabled = false;
+        freelookcam.enabled = false;
     }
 }
