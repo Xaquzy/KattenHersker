@@ -19,13 +19,14 @@ public class Trigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Key"))
         {
             Debug.Log("Something opened");
+            // kald på den funktion der åbner døren
         }
         else
         {
-            Debug.LogWarning("Object with tag 'key' not found");
+            Debug.Log("Object with tag 'Key' not found");
         }
     }
 
