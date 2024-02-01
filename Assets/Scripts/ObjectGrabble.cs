@@ -15,14 +15,12 @@ public class ObjectGrabble : MonoBehaviour
     {
         this.objectGrabPointTransform = objectGrabPointTransform;
         objectRigidBody.useGravity = false;
-        objectRigidBody.freezeRotation = true;
     }
 
     public void Drop()
     {
         this.objectGrabPointTransform = null;
         objectRigidBody.useGravity = true;
-        objectRigidBody.freezeRotation = true;
     }
  
     private void FixedUpdate()
