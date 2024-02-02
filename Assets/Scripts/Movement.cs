@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         //Grounding
-        isGrounded = controller.isGrounded;
+        isGrounded = controller.isGrounded;  
 
         if (isGrounded && velocity.y < 0)
         {
