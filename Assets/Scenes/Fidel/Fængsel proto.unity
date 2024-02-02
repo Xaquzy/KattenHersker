@@ -3436,6 +3436,7 @@ MonoBehaviour:
   key: {fileID: 8898755028135587318}
   cutsceneCam: {fileID: 2118406132}
   CutSceneTime: 10
+  NewSceneNumber: 1
   dialog: {fileID: 492732363}
 --- !u!82 &492732363
 AudioSource:
@@ -3768,7 +3769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530543252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018189475, y: -0.0000000037252903, z: 0.0000000013969839, w: 0.9998346}
+  m_LocalRotation: {x: 0.018189477, y: 0.000000011175871, z: -0.0000000023283064, w: 0.9998346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5948,7 +5949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921212224}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000007508787, y: -0.0000000074505797, z: 0.0000000013969838, w: 1}
+  m_LocalRotation: {x: -0.00000002243905, y: 0.0000000074505797, z: -0.0000000018626449, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6514,8 +6515,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.006458056, y: 0.9923662, z: -0.1078832, w: 0.059404586}
-  m_LocalPosition: {x: 5.777228, y: 1.88, z: -1.0132496}
+  m_LocalRotation: {x: 0.0064580482, y: 0.9923662, z: -0.107883215, w: 0.059404507}
+  m_LocalPosition: {x: 5.7772284, y: 1.88, z: -1.0132496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10214,7 +10215,6 @@ GameObject:
   - component: {fileID: 1572427055}
   - component: {fileID: 1572427056}
   - component: {fileID: 1572427057}
-  - component: {fileID: 1572427058}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -10365,21 +10365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059855a35acc1c3478436c1a46dfec5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1572427058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572427049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a42c7a42a084bd4cbf727f470e3506c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1572427049}
-  movement: {fileID: 1572427050}
-  freelookcam: {fileID: 369691940}
 --- !u!1001 &1582683394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10880,7 +10865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593031691}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.01814147, y: -0.0000000037252903, z: 4.656613e-10, w: 0.9998355}
+  m_LocalRotation: {x: -0.018141486, y: 0.000000007450581, z: -4.656613e-10, w: 0.9998355}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15897,9 +15882,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118406130}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 1000
+  m_Drag: 100000
+  m_AngularDrag: 100000
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -15914,7 +15899,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!4 &543450652459617079
 Transform:
