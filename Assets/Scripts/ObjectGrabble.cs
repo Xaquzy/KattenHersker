@@ -22,7 +22,7 @@ public class ObjectGrabble : MonoBehaviour
         this.objectGrabPointTransform = null;
         objectRigidBody.useGravity = true;
     }
-
+ 
     private void FixedUpdate()
     {
         if (objectGrabPointTransform != null) 

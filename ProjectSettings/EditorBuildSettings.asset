@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/Fidel/F\xE6ngsel proto.unity"
+    guid: c3784bdf3264e194da749147cdb15603
+  - enabled: 1
+    path: Assets/Scenes/Fidel/By proto.unity
+    guid: 1aba6694f948d004791ec82635bf6820
+  - enabled: 1
+    path: Assets/Scenes/Basmala/Win.unity
+    guid: 3732e4dc43ab6ac4ba0aa1ef2bf2faf4
+  - enabled: 1
+    path: Assets/Scenes/Basmala/Main Menu.unity
+    guid: 75194dd7331b780408b15d2d616d1216
   m_configObjects: {}
