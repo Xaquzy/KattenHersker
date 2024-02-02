@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Prototype/PRO - Throne.unity
+    guid: fe26beb1fc1bc8945b05cef5b6bf7a84
+  - enabled: 1
+    path: "Assets/Scenes/Prototype/PRO - Cut f\xE6ng.unity"
+    guid: 9e357a74432e2ea48be63d58bc297512
   m_configObjects: {}
