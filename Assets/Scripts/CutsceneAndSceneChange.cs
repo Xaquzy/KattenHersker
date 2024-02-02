@@ -10,6 +10,7 @@ public class CutsceneAndSceneChange : MonoBehaviour
     public GameObject key;
     public Camera cutsceneCam;
     [SerializeField] private float CutSceneTime = 3f;
+    [SerializeField] private int NewSceneNumber = 1;
     [SerializeField] AudioSource dialog;
 
     private void OnTriggerEnter(Collider other)
@@ -21,6 +22,7 @@ public class CutsceneAndSceneChange : MonoBehaviour
                 cutsceneCam.enabled = true;
                 player.SetActive(false);
                 key.SetActive(false);
+                //Disable mouse camera input
                 //Play animation of the cutscene
                 dialog.Play();
                 StartCoroutine(FinishCut());
@@ -31,7 +33,7 @@ public class CutsceneAndSceneChange : MonoBehaviour
             {
                 
                 yield return new WaitForSeconds(CutSceneTime);
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(NewSceneNumber);
                 
             }
             
