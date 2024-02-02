@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Number
   - Trigger
+  - TheKey
+  - PlayerTrigger
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - UI
   - buttons
   - GrabObjects
-  - 
+  - Biler
   - 
   - 
   - 
