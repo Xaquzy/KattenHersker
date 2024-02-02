@@ -37,7 +37,6 @@ public class CutsceneAndSceneChange : MonoBehaviour
                 
             }
             
-        }
-            
+        }  
     }
 }
