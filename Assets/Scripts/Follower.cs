@@ -28,6 +28,7 @@ public class Follower : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
             // Move the player towards the target player
             characterController.Move(direction.normalized * moveSpeed * Time.deltaTime);
+      
         } 
     }
 }
