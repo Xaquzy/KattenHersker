@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Prototype/PRO - f\xE6ng.unity"
     guid: ab768fe14f81f2e40825782967bf214a
+  - enabled: 1
+    path: Assets/Scenes/Prototype/PRO - By.unity
+    guid: 2b10c52352beed243bd876f568a9869b
   m_configObjects: {}
