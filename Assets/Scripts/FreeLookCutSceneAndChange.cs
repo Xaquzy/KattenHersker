@@ -13,6 +13,9 @@ public class FreeLookCutSceneAndChange : MonoBehaviour
     [SerializeField] private float CutSceneTime = 3f;
     [SerializeField] private int NewSceneNumber = 1;
     [SerializeField] AudioSource dialog;
+    
+    //Animation
+    public Animator PlayerAnimator;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,6 +28,7 @@ public class FreeLookCutSceneAndChange : MonoBehaviour
             //Player look at the talking npc
             Vector3 lookDirection = LookTarget.position - player.position;
             player.rotation = Quaternion.LookRotation(lookDirection);
+            PlayerAnimator.SetBool("Talk", true);
 
             //player.SetActive(false);
             //key.SetActive(false);
