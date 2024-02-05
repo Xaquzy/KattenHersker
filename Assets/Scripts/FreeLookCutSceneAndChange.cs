@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class FreeLookCutSceneAndChange : MonoBehaviour
 {
 
-    //public GameObject player;
-    //public GameObject key;
+    public Transform player;
+    public Transform LookTarget;
     public CinemachineFreeLook cutsceneCam;
     public CinemachineFreeLook MainCam;
     [SerializeField] private float CutSceneTime = 3f;
@@ -22,6 +22,10 @@ public class FreeLookCutSceneAndChange : MonoBehaviour
             this.gameObject.GetComponent<BoxCollider>().enabled = false;
             cutsceneCam.enabled = true;
             MainCam.enabled = false;
+            //Player look at the talking npc
+            Vector3 lookDirection = LookTarget.position - player.position;
+            player.rotation = Quaternion.LookRotation(lookDirection);
+
             //player.SetActive(false);
             //key.SetActive(false);
             //Disable mouse camera input
