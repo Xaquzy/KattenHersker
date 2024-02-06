@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Fivetable : MonoBehaviour
+public class ToTabel : MonoBehaviour
 {
     private GameObject TheNumber;
 
@@ -36,14 +36,14 @@ public class Fivetable : MonoBehaviour
         {
             float number = NumberHolder.number;
 
-            if (number % 5 == 0)
+            if (number % 2 == 0)
             {
-                Debug.Log("This number is divisible by 5!");
+                Debug.Log("This number is divisible by 2!");
             }
-
+            
             else
             {
-                Debug.Log("This number is not divisible by 5! Try again.");
+                Debug.Log("This number is not divisible by 2! Try again.");
             }
 
         }
