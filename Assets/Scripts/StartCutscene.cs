@@ -9,6 +9,7 @@ public class StartCutscene : MonoBehaviour
     //public GameObject player;
     //public GameObject key;
     public Camera cutsceneCam;
+    public Animator DogAnimator;
     [SerializeField] private float CutSceneTime = 3f;
     [SerializeField] private int NewSceneNumber = 1;
     [SerializeField] AudioSource dialog;
@@ -18,6 +19,7 @@ public class StartCutscene : MonoBehaviour
         {
             Debug.Log("AWAKE!!");
             cutsceneCam.enabled = true;
+            DogAnimator.SetBool("Cry", true);
             //player.SetActive(false);
             //key.SetActive(false);
             //Disable mouse camera input
@@ -26,10 +28,11 @@ public class StartCutscene : MonoBehaviour
             StartCoroutine(FinishCut());
         }
 
-        //Scenechange after 10s of cut scene
+        //Scenechange after x seconds of cut scene
         IEnumerator FinishCut()
         {
             yield return new WaitForSeconds(CutSceneTime);
+            DogAnimator.SetBool("Cry", false);
             SceneManager.LoadScene(NewSceneNumber);
         }
     } 

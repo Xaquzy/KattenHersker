@@ -15525,7 +15525,6 @@ GameObject:
   - component: {fileID: 1219523026}
   - component: {fileID: 1219523029}
   - component: {fileID: 1219523028}
-  - component: {fileID: 1219523030}
   m_Layer: 0
   m_Name: "Jaild\xF8r"
   m_TagString: Untagged
@@ -15639,27 +15638,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 2.34, z: -5.67}
---- !u!95 &1219523030
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219523024}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 12440bde66ff8c443a9f83ed75c72e9a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1221387112
 GameObject:
   m_ObjectHideFlags: 0
@@ -29304,6 +29282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652459617079}
+  - component: {fileID: 919132148256936334}
   m_Layer: 0
   m_Name: Jail
   m_TagString: Untagged
@@ -29311,6 +29290,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &919132148256936334
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148256936333}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8259d303f6f49c8498462bea9f335d09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!23 &1129496809807087461
 MeshRenderer:
   m_ObjectHideFlags: 0
