@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CutsceneAndSceneChange : MonoBehaviour
 {
     public GameObject player;
-    public GameObject key;
+    public Animator JaildoorAnimator;
     public Camera cutsceneCam;
     [SerializeField] private float CutSceneTime = 3f;
     [SerializeField] private int NewSceneNumber = 1;
@@ -26,6 +26,7 @@ public class CutsceneAndSceneChange : MonoBehaviour
                 //Play animation of the cutscene
                 dialog.Play();
                 StartCoroutine(FinishCut());
+                JaildoorAnimator.SetBool("Fly", true);
             }
 
             //Scenechange after 10s of cut scene
