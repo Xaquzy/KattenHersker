@@ -12,6 +12,7 @@ public class Fivetable : MonoBehaviour
     void Start()
     {
         TheNumber = GameObject.FindWithTag("Number");
+        Debug.Log("Number found");
 
         if (TheNumber == null)
         {

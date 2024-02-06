@@ -1762,8 +1762,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248828312}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.005509978, y: 0.9727308, z: -0.23070467, w: 0.02323197}
-  m_LocalPosition: {x: 0.03928001, y: 2.410509, z: -0.86939096}
+  m_LocalRotation: {x: 0.0055098054, y: 0.9727308, z: -0.23070471, w: 0.02323124}
+  m_LocalPosition: {x: 0.039288588, y: 2.41051, z: -0.869391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3813,7 +3813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530543252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018189453, y: 0.000000039115548, z: -0.000000009138603, w: 0.99983466}
+  m_LocalRotation: {x: 0.018189438, y: -0.00000003259629, z: 0.000000007858034, w: 0.99983466}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4698,8 +4698,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701601076}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0058865487, y: 0.9683896, z: -0.24831457, w: 0.022956658}
-  m_LocalPosition: {x: 0.041294724, y: 2.4105098, z: -0.869296}
+  m_LocalRotation: {x: 0.0058865873, y: 0.96838945, z: -0.2483146, w: 0.022956805}
+  m_LocalPosition: {x: 0.041292816, y: 2.4105098, z: -0.8692961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5972,7 +5972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921212224}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000044704386, y: 0.00000004656612, z: -0.00000001018634, w: 1}
+  m_LocalRotation: {x: -0.000000044704386, y: -0.00000004656612, z: 0.000000010302755, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6538,7 +6538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0005614621, y: 0.9941331, z: -0.10803912, w: 0.0051663523}
+  m_LocalRotation: {x: 0.00056146935, y: 0.9941331, z: -0.10803912, w: 0.0051664193}
   m_LocalPosition: {x: 6.117513, y: 1.8799999, z: -8.920176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6593,7 +6593,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 98f49796abe3aa14d936ac70d88b308c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.31
+  m_Volume: 0.14
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10545,7 +10545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593031691}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.01814149, y: 0.000000035855916, z: -0.0000000071013337, w: 0.99983543}
+  m_LocalRotation: {x: -0.01814149, y: -0.000000026077029, z: 0.0000000054715197, w: 0.99983543}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13453,8 +13453,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915298146}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.006293115, y: 0.96371347, z: -0.2658881, w: 0.022809442}
-  m_LocalPosition: {x: 0.04173128, y: 2.41051, z: -0.86927193}
+  m_LocalRotation: {x: 0.0062926984, y: 0.9637135, z: -0.26588815, w: 0.022807932}
+  m_LocalPosition: {x: 0.041743193, y: 2.41051, z: -0.8692718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21966,8 +21966,8 @@ MonoBehaviour:
   LookTarget: {fileID: 590167724}
   cutsceneCam: {fileID: 380969077}
   MainCam: {fileID: 369691940}
-  CutSceneTime: 30
-  NewSceneNumber: 0
+  CutSceneTime: 17
+  NewSceneNumber: 4
   dialog: {fileID: 7232099074002167704}
   PlayerAnimator: {fileID: 919132149538726672}
 --- !u!82 &7232099074002167704
@@ -21980,7 +21980,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 57b5afa1ae2228148a473f7712e321b0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8fd10e9296475e9468694af73e3c86bb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
