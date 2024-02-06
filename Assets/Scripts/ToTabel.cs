@@ -37,7 +37,7 @@ public class ToTabel : MonoBehaviour
     }
 
 
-    private void CheckNumber()
+    private void CheckNumber(GameObject numberObject)
     {
         AssignNumber NumberHolder = TheNumber.GetComponent<AssignNumber>();
         if(NumberHolder != null)
@@ -48,6 +48,7 @@ public class ToTabel : MonoBehaviour
             {
                 Debug.Log("This number is divisible by 2!");
                 counter = counter + 1;
+                Destroy(numberObject);
             }
             
             else
@@ -69,7 +70,8 @@ public class ToTabel : MonoBehaviour
         if (other.CompareTag("Number"))
         {
             Debug.Log("The number is in the machine");
-            CheckNumber();
+            TheNumber = other.gameObject;
+            CheckNumber(other.gameObject);
         }
         else
         {
