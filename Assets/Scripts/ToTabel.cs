@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ToTabel : MonoBehaviour
 {
     private GameObject TheNumber;
+    [SerializeField] private float counter = 0;
+    [SerializeField] private int NewSceneNumber = 1;
 
 
     // Start is called before the first frame update
@@ -24,6 +28,10 @@ public class ToTabel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (counter == 5)
+        {
+            SceneManager.LoadScene(NewSceneNumber);
+        }
 
 
     }
@@ -39,6 +47,7 @@ public class ToTabel : MonoBehaviour
             if (number % 2 == 0)
             {
                 Debug.Log("This number is divisible by 2!");
+                counter = counter + 1;
             }
             
             else
