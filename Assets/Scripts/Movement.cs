@@ -31,8 +31,8 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        //Animator
-        //animator = GetComponent<Animator>();
+        Animator animator;
+        animator = GetComponent<Animator>();
 
         //No cursor & Move
         trueSpeed = walkSpeed;
@@ -99,11 +99,11 @@ public class Movement : MonoBehaviour
         //Animation
         if (direction.magnitude <= 0)
         {
-            //PlayerAnimator.SetBool("Moving", false);
+            PlayerAnimator.SetBool("Moving", false);
         }
         else
         {
-            //PlayerAnimator.SetBool("Moving", true);
+            PlayerAnimator.SetBool("Moving", true);
         }
 
     }

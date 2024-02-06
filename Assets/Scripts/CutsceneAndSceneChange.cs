@@ -20,8 +20,8 @@ public class CutsceneAndSceneChange : MonoBehaviour
             {
                 this.gameObject.GetComponent<BoxCollider>().enabled = false;
                 cutsceneCam.enabled = true;
-                player.SetActive(false);
-                key.SetActive(false);
+                //player.SetActive(false);
+                //key.SetActive(false);
                 //Disable mouse camera input
                 //Play animation of the cutscene
                 dialog.Play();
