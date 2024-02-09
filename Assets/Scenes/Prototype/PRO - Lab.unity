@@ -2954,7 +2954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  NewSceneNumber: 1
+  NewSceneNumber: 3
 --- !u!65 &919132147882081413
 BoxCollider:
   m_ObjectHideFlags: 0
