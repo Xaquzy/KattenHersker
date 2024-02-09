@@ -30,7 +30,7 @@ public class ToTabel : MonoBehaviour
     {
         if (counter == 5)
         {
-            PlayerPrefs.SetInt("reload",25);
+            PlayerPrefs.SetString("TurtleFollow","Du er kommet ud af labyrinten! Skildpadden følger dig nu!");
             SceneManager.LoadScene(NewSceneNumber);
         }
 

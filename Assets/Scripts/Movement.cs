@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     CharacterController controller;
     float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+    public bool following = false;
 
     //Animation
     public Animator PlayerAnimator;
@@ -40,9 +41,10 @@ public class Movement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
 
-        if(PlayerPrefs.HasKey("test"))
+        if(PlayerPrefs.HasKey("TurtleFollow"))
         {
-            Debug.Log(PlayerPrefs.GetInt("test"));
+            transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
+            following = true;
         }
     }
 
