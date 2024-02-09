@@ -39,6 +39,11 @@ public class Movement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
+
+        if(PlayerPrefs.HasKey("test"))
+        {
+            Debug.Log(PlayerPrefs.GetInt("test"));
+        }
     }
 
     // Update is called once per frame

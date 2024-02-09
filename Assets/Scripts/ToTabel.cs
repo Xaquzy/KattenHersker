@@ -30,6 +30,7 @@ public class ToTabel : MonoBehaviour
     {
         if (counter == 5)
         {
+            PlayerPrefs.SetInt("reload",25);
             SceneManager.LoadScene(NewSceneNumber);
         }
 
