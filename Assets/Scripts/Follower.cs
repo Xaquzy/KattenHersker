@@ -15,7 +15,7 @@ public class Follower : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    void Update()
+    public void Following()
     {
         // Calculate the direction from the current player to the target player
         Vector3 direction = targetPlayer.position - transform.position;
@@ -30,5 +30,7 @@ public class Follower : MonoBehaviour
             characterController.Move(direction.normalized * moveSpeed * Time.deltaTime);
       
         } 
+
+        
     }
 }
