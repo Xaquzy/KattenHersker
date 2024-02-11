@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     CharacterController controller;
     float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+    
 
     //Animation
     public Animator PlayerAnimator;
@@ -27,6 +28,12 @@ public class Movement : MonoBehaviour
     private int counter = 2;
 
 
+    bool TurtleIsFollowing = false;
+    bool SnakeIsFollowing = false;
+    bool HorseIsFollowing = false;
+
+
+
 
 
     void Start()
@@ -40,16 +47,23 @@ public class Movement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
 
-        if(PlayerPrefs.HasKey("TurtleFollow"))
+        if (PlayerPrefs.HasKey("TurtleFollow"))
         {
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
-            Follower followerScript = FindObjectOfType<Follower>();
-            if (followerScript != null)
+            TurtleIsFollowing = true;
+            if (TurtleIsFollowing == true)
             {
-                followerScript.Following();
+                GameObject npc = Instantiate(npcPrefab, spawnPoint.position, spawnPoint.rotation);
+                Follower followerScript = npc.AddComponent<Follower>();
+                followerScript.targetPlayer = playerTransform;
             }
+
+
+
         }
+
+
     }
 
     // Update is called once per frame
