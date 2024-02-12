@@ -12,6 +12,7 @@ public class Follower : MonoBehaviour
 
     void Start()
     {
+        //enabled = false;
         characterController = GetComponent<CharacterController>();
     }
 

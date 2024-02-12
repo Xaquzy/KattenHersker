@@ -28,11 +28,11 @@ public class Movement : MonoBehaviour
     private int counter = 2;
 
 
-    bool TurtleIsFollowing = false;
-    bool SnakeIsFollowing = false;
-    bool HorseIsFollowing = false;
+    //bool TurtleIsFollowing = false;
+    //bool SnakeIsFollowing = false;
+    //bool HorseIsFollowing = false;
 
-
+    public GameObject Turtle;
 
 
 
@@ -51,19 +51,21 @@ public class Movement : MonoBehaviour
         {
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
-            TurtleIsFollowing = true;
-            if (TurtleIsFollowing == true)
-            {
-                GameObject npc = Instantiate(npcPrefab, spawnPoint.position, spawnPoint.rotation);
-                Follower followerScript = npc.AddComponent<Follower>();
-                followerScript.targetPlayer = playerTransform;
-            }
+            Follower followerScript = Turtle.GetComponent<Follower>();
 
-
+                if (followerScript != null)
+                {
+                    Debug.Log("The follower script is 0FF");
+                    followerScript.enabled = true;
+                    Debug.Log("The follower script is ON");
+                }
+                else
+                {
+                    Debug.LogError("Follower not found on the specified GameObject.");
+                }
+                        
 
         }
-
-
     }
 
     // Update is called once per frame

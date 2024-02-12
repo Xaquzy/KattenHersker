@@ -28,9 +28,13 @@ public class ToTabel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (counter == 5)
         {
+            Debug.Log("You have now collected all numbers");
             PlayerPrefs.SetString("TurtleFollow", "You have cleared the maze, and the turtle will now follow you!");
+            Debug.Log("The PlayerPref witht the key TurtleFollow has now been assigned");
             SceneManager.LoadScene(NewSceneNumber);
         }
 
