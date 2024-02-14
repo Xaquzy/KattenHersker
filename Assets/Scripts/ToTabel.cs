@@ -10,6 +10,8 @@ public class ToTabel : MonoBehaviour
     private GameObject TheNumber;
     [SerializeField] private float counter = 0;
     [SerializeField] private int NewSceneNumber = 1;
+    [SerializeField] private float lort = 0;
+
 
 
     // Start is called before the first frame update

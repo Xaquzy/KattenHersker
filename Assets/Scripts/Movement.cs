@@ -50,10 +50,13 @@ public class Movement : MonoBehaviour
         if (PlayerPrefs.HasKey("TurtleFollow"))
         {
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
+            Debug.Log("Del 1");
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
+            Debug.Log("Del 2");
             Follower followerScript = Turtle.GetComponent<Follower>();
+            Debug.Log("Del 3");
 
-                if (followerScript != null)
+            if (followerScript != null)
                 {
                     Debug.Log("The follower script is 0FF");
                     followerScript.enabled = true;
