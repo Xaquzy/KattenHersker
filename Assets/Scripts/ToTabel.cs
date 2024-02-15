@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ToTabel : MonoBehaviour
 {
-    private GameObject TheNumber;
+    private GameObject NumberObject;
     [SerializeField] private float counter = 0;
     [SerializeField] private int NewSceneNumber = 1;
     [SerializeField] private float lort = 0;
@@ -17,10 +17,10 @@ public class ToTabel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TheNumber = GameObject.FindWithTag("Number");
+        NumberObject = GameObject.FindWithTag("Number");
         Debug.Log("Number found");
 
-        if (TheNumber == null)
+        if (NumberObject == null)
         {
             Debug.LogError("GameObject with tag 'Number' not found.");
         }
@@ -44,9 +44,9 @@ public class ToTabel : MonoBehaviour
     }
 
 
-    private void CheckNumber(GameObject numberObject)
+    private void CheckNumber(GameObject NumberObject)
     {
-        AssignNumber NumberHolder = TheNumber.GetComponent<AssignNumber>();
+        AssignNumber NumberHolder = NumberObject.GetComponent<AssignNumber>();
         if(NumberHolder != null)
         {
             float number = NumberHolder.number;
@@ -55,7 +55,7 @@ public class ToTabel : MonoBehaviour
             {
                 Debug.Log("This number is divisible by 2!");
                 counter = counter + 1;
-                Destroy(numberObject);
+                Destroy(NumberObject);
             }
             
             else
@@ -77,7 +77,7 @@ public class ToTabel : MonoBehaviour
         if (other.CompareTag("Number"))
         {
             Debug.Log("The number is in the machine");
-            TheNumber = other.gameObject;
+            NumberObject = other.gameObject;
             CheckNumber(other.gameObject);
         }
         else
