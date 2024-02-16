@@ -72,13 +72,13 @@ public class ToTabel : MonoBehaviour
 
     
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider Input)
     {
-        if (other.CompareTag("Number"))
+        if (Input.CompareTag("Number"))
         {
             Debug.Log("The number is in the machine");
-            NumberObject = other.gameObject;
-            CheckNumber(other.gameObject);
+            NumberObject = Input.gameObject;
+            CheckNumber(Input.gameObject);
         }
         else
         {
