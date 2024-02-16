@@ -10,13 +10,15 @@ public class ToTabel : MonoBehaviour
     private GameObject NumberObject;
     [SerializeField] private float counter = 0;
     [SerializeField] private int NewSceneNumber = 1;
-    [SerializeField] private float lort = 0;
+
+    public Vector3 targetPosition = new Vector3(1.0f, 2.0f, 3.0f);
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.DeleteKey("TurtleFollow");
         NumberObject = GameObject.FindWithTag("Number");
         Debug.Log("Number found");
 
@@ -30,8 +32,8 @@ public class ToTabel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        
         if (counter == 5)
         {
             Debug.Log("You have now collected all numbers");
@@ -77,8 +79,11 @@ public class ToTabel : MonoBehaviour
         if (Input.CompareTag("Number"))
         {
             Debug.Log("The number is in the machine");
-            NumberObject = Input.gameObject;
             CheckNumber(Input.gameObject);
+            //if (counter == 5)
+            //{
+            //    SceneManager.LoadScene(NewSceneNumber);
+            //}
         }
         else
         {

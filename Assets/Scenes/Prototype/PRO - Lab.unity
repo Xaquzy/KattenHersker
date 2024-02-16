@@ -3492,7 +3492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530543252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018189486, y: -0.000000059604645, z: 0.000000010244548, w: 0.99983466}
+  m_LocalRotation: {x: 0.018189494, y: 0.000000029802326, z: -0.0000000025611373, w: 0.9998346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6691,7 +6691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921212224}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000004656613, y: -0.000000029802322, z: 9.313226e-10, w: 1}
+  m_LocalRotation: {x: -4.3655746e-11, y: 0.000000029802322, z: -0.000000002561137, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6991,8 +6991,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0120146535, y: 0.9145552, z: -0.027241066, w: 0.40336388}
-  m_LocalPosition: {x: 7.874773, y: 0.56, z: -2.4931364}
+  m_LocalRotation: {x: 0.0023576322, y: 0.9967798, z: -0.031973515, w: 0.073499575}
+  m_LocalPosition: {x: 9.895568, y: 0.56, z: -1.583013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9993,6 +9993,7 @@ MonoBehaviour:
   sprintSpeed: 6
   jumpHeight: 5
   gravity: -2
+  Turtle: {fileID: 0}
 --- !u!95 &1312051635
 Animator:
   serializedVersion: 5
@@ -12484,7 +12485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593031691}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.01814146, y: -0, z: -0.0000000018626451, w: 0.9998355}
+  m_LocalRotation: {x: -0.018141458, y: 0.000000022351742, z: -0.0000000013969839, w: 0.99983543}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16288,8 +16289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db88952fa79401499dbc0f77f40ea0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ccounter: 0
+  counter: 0
   NewSceneNumber: 3
+  targetPosition: {x: 10.03, y: 2, z: 3}
 --- !u!65 &919132147882081413
 BoxCollider:
   m_ObjectHideFlags: 0
