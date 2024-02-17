@@ -34,7 +34,10 @@ public class FreeLookCutSceneAndChange : MonoBehaviour
             //key.SetActive(false);
             //Disable mouse camera input
             //Play animation of the cutscene
-            dialog.Play();
+            if (dialog != null)
+            {
+                dialog.Play();
+            }
             StartCoroutine(FinishCut());
         }
 
