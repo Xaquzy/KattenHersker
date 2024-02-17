@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 //1
 public class Movement : MonoBehaviour
@@ -33,6 +34,8 @@ public class Movement : MonoBehaviour
     //bool HorseIsFollowing = false;
 
     public GameObject Turtle;
+    public GameObject Snake;
+    public GameObject Horse;
 
 
 
@@ -47,32 +50,69 @@ public class Movement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
 
+
         if (PlayerPrefs.HasKey("TurtleFollow"))
         {
+
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
-            Debug.Log("Del 1");
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
-            Debug.Log("Del 2");
             Follower followerScript = Turtle.GetComponent<Follower>();
-            Debug.Log("Del 3");
+            PlayerPrefs.DeleteKey("TurtleFollow");
 
             if (followerScript != null)
-                {
-                    Debug.Log("The follower script is 0FF");
-                    followerScript.enabled = true;
-                    Debug.Log("The follower script is ON");
-                }
-                else
-                {
-                    Debug.LogError("Follower not found on the specified GameObject.");
-                }
-                        
+            {
+                followerScript.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("Follower not found on the specified GameObject.");
+            }
 
         }
+        else
+        {
+            Debug.Log("No PlayerPref with the key 'TurtleFollow' was found.");
+        }
+
+        if (PlayerPrefs.HasKey("SnakeFollow"))
+        {
+            Debug.Log(PlayerPrefs.GetString("SnakeFollow"));
+            transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
+            Follower followerScript = Snake.GetComponent<Follower>();
+            PlayerPrefs.DeleteKey("SnakeFollow");
+
+            if (followerScript != null)
+            {
+                followerScript.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("Follower not found on the specified GameObject.");
+            }
+
+        }
+        if (PlayerPrefs.HasKey("HorseFollow"))
+        {
+            Debug.Log(PlayerPrefs.GetString("HorseFollow"));
+            transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
+            Follower followerScript = Horse.GetComponent<Follower>();
+            PlayerPrefs.DeleteKey("HorseFollow");
+
+            if (followerScript != null)
+            {
+                followerScript.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("Follower not found on the specified GameObject.");
+            }
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+        // Update is called once per frame
+        void Update()
     {
         //Grounding
         isGrounded = controller.isGrounded;  

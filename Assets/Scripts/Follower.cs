@@ -12,14 +12,13 @@ public class Follower : MonoBehaviour
 
     void Start()
     {
-        //enabled = false;
         characterController = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        
-        
+
+        Following();
     }
 
     public void Following()
