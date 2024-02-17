@@ -29,10 +29,6 @@ public class Movement : MonoBehaviour
     private int counter = 2;
 
 
-    //bool TurtleIsFollowing = false;
-    //bool SnakeIsFollowing = false;
-    //bool HorseIsFollowing = false;
-
     public GameObject Turtle;
     public GameObject Snake;
     public GameObject Horse;
@@ -57,7 +53,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
             Follower followerScript = Turtle.GetComponent<Follower>();
-            //PlayerPrefs.DeleteKey("TurtleFollow");
+            FreeLookCutSceneAndChange ConvoCutsceneScript = Turtle.GetComponent<FreeLookCutSceneAndChange>();
 
             if (followerScript != null)
             {
@@ -67,6 +63,16 @@ public class Movement : MonoBehaviour
             {
                 Debug.LogError("Follower not found on the specified GameObject.");
             }
+
+            if (ConvoCutsceneScript != null)
+            {
+                followerScript.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("ConvoCutsceneScript not found on the specified GameObject.");
+            }
+
 
         }
         else
@@ -79,7 +85,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("SnakeFollow"));
             transform.position = new Vector3(35.51369f, -0.59494354f, -13.06677f);
             Follower followerScript = Snake.GetComponent<Follower>();
-            //PlayerPrefs.DeleteKey("SnakeFollow");
+            FreeLookCutSceneAndChange ConvoCutsceneScript = Snake.GetComponent<FreeLookCutSceneAndChange>();
 
             if (followerScript != null)
             {
@@ -88,6 +94,15 @@ public class Movement : MonoBehaviour
             else
             {
                 Debug.LogError("Follower not found on the specified GameObject.");
+            }
+
+            if (ConvoCutsceneScript != null)
+            {
+                followerScript.enabled = false;
+            }
+            else
+            {
+                Debug.LogError("ConvoCutsceneScript not found on the specified GameObject.");
             }
 
         }
@@ -96,7 +111,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("HorseFollow"));
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
             Follower followerScript = Horse.GetComponent<Follower>();
-            //PlayerPrefs.DeleteKey("HorseFollow");
+            FreeLookCutSceneAndChange ConvoCutsceneScript = Horse.GetComponent<FreeLookCutSceneAndChange>();
 
             if (followerScript != null)
             {
@@ -105,6 +120,15 @@ public class Movement : MonoBehaviour
             else
             {
                 Debug.LogError("Follower not found on the specified GameObject.");
+            }
+
+            if (ConvoCutsceneScript != null)
+            {
+                followerScript.enabled = false;
+            }
+            else
+            {
+                Debug.LogError("ConvoCutsceneScript not found on the specified GameObject.");
             }
 
         }

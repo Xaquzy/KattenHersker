@@ -17,6 +17,11 @@ public class FreeLookCutSceneAndChange : MonoBehaviour
     //Animation
     public Animator NPCAnimator;
 
+    void Start()
+    {
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerTrigger"))
