@@ -44,7 +44,7 @@ public class SceneTransition : MonoBehaviour
 
     public void SnakeMinigame()
     {
-        PlayerPrefs.SetString("SnakeFollow", "You have cleared the maze, and the turtle will now follow you!");
+        PlayerPrefs.SetString("SnakeFollow", "The snake will now follow you!");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         SceneManager.LoadScene("PRO - By");

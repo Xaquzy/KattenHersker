@@ -77,7 +77,7 @@ public class Movement : MonoBehaviour
         if (PlayerPrefs.HasKey("SnakeFollow"))
         {
             Debug.Log(PlayerPrefs.GetString("SnakeFollow"));
-            transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
+            transform.position = new Vector3(35.51369f, -0.59494354f, -13.06677f);
             Follower followerScript = Snake.GetComponent<Follower>();
             PlayerPrefs.DeleteKey("SnakeFollow");
 
