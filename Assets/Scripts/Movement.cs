@@ -57,7 +57,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
             Follower followerScript = Turtle.GetComponent<Follower>();
-            PlayerPrefs.DeleteKey("TurtleFollow");
+            //PlayerPrefs.DeleteKey("TurtleFollow");
 
             if (followerScript != null)
             {
@@ -79,7 +79,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("SnakeFollow"));
             transform.position = new Vector3(35.51369f, -0.59494354f, -13.06677f);
             Follower followerScript = Snake.GetComponent<Follower>();
-            PlayerPrefs.DeleteKey("SnakeFollow");
+            //PlayerPrefs.DeleteKey("SnakeFollow");
 
             if (followerScript != null)
             {
@@ -96,7 +96,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("HorseFollow"));
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
             Follower followerScript = Horse.GetComponent<Follower>();
-            PlayerPrefs.DeleteKey("HorseFollow");
+            //PlayerPrefs.DeleteKey("HorseFollow");
 
             if (followerScript != null)
             {
@@ -176,6 +176,10 @@ public class Movement : MonoBehaviour
             PlayerAnimator.SetBool("Moving", true);
         }
 
+    }
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
 
