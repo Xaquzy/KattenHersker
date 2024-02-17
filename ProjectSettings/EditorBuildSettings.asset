@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Prototype/PRO - Lab.unity
     guid: 48d87030e40a5a549b53b6d1fa88fe6b
   - enabled: 1
-    path: Assets/Scenes/Final Product/MinigamePlaceholder.unity
+    path: Assets/Scenes/Final Product/SnakeMinigamePlaceholder.unity
     guid: 2675e8663880fbc4f98105c1bed0d0a3
   m_configObjects: {}

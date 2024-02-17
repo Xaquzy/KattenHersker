@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
             Follower followerScript = Turtle.GetComponent<Follower>();
-            FreeLookCutSceneAndChange ConvoCutsceneScript = Turtle.GetComponent<FreeLookCutSceneAndChange>();
+            PreMinigameCutScene ConvoCutsceneScript = Turtle.GetComponent<PreMinigameCutScene>();
 
             if (followerScript != null)
             {
@@ -66,7 +66,7 @@ public class Movement : MonoBehaviour
 
             if (ConvoCutsceneScript != null)
             {
-                followerScript.enabled = true;
+                ConvoCutsceneScript.enabled = false;
             }
             else
             {
@@ -85,7 +85,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("SnakeFollow"));
             transform.position = new Vector3(35.51369f, -0.59494354f, -13.06677f);
             Follower followerScript = Snake.GetComponent<Follower>();
-            FreeLookCutSceneAndChange ConvoCutsceneScript = Snake.GetComponent<FreeLookCutSceneAndChange>();
+            PreMinigameCutScene ConvoCutsceneScript = Snake.GetComponent<PreMinigameCutScene>();
 
             if (followerScript != null)
             {
@@ -98,7 +98,7 @@ public class Movement : MonoBehaviour
 
             if (ConvoCutsceneScript != null)
             {
-                followerScript.enabled = false;
+                ConvoCutsceneScript.enabled = false;
             }
             else
             {
@@ -111,7 +111,7 @@ public class Movement : MonoBehaviour
             Debug.Log(PlayerPrefs.GetString("HorseFollow"));
             transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
             Follower followerScript = Horse.GetComponent<Follower>();
-            FreeLookCutSceneAndChange ConvoCutsceneScript = Horse.GetComponent<FreeLookCutSceneAndChange>();
+            PreMinigameCutScene ConvoCutsceneScript = Horse.GetComponent<PreMinigameCutScene>();
 
             if (followerScript != null)
             {
@@ -124,7 +124,7 @@ public class Movement : MonoBehaviour
 
             if (ConvoCutsceneScript != null)
             {
-                followerScript.enabled = false;
+                ConvoCutsceneScript.enabled = false;
             }
             else
             {

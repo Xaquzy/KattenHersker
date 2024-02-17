@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class FreeLookCutSceneAndChange : MonoBehaviour
+public class PreMinigameCutScene : MonoBehaviour
 {
 
     public Transform player;
