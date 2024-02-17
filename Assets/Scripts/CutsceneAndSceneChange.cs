@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class CutsceneAndSceneChange : MonoBehaviour
 {
-    public GameObject player;
-    public Animator JaildoorAnimator;
+    public Transform JaildoorTrigger;
     public Camera cutsceneCam;
+    public Movement movement;
     [SerializeField] private float CutSceneTime = 3f;
     [SerializeField] private int NewSceneNumber = 1;
     [SerializeField] AudioSource dialog;
@@ -20,13 +20,13 @@ public class CutsceneAndSceneChange : MonoBehaviour
             {
                 this.gameObject.GetComponent<BoxCollider>().enabled = false;
                 cutsceneCam.enabled = true;
-                //player.SetActive(false);
+                JaildoorTrigger.position = new Vector3(-100f, -100f, -100f);
+                movement.enabled = true;
                 //key.SetActive(false);
                 //Disable mouse camera input
                 //Play animation of the cutscene
                 dialog.Play();
                 StartCoroutine(FinishCut());
-                JaildoorAnimator.SetBool("Fly", true);
             }
 
             //Scenechange after 10s of cut scene
