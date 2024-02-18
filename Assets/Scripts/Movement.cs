@@ -46,6 +46,9 @@ public class Movement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
 
+        
+
+
 
         if (PlayerPrefs.HasKey("TurtleFollow"))
         {

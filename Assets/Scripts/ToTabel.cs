@@ -11,9 +11,8 @@ public class ToTabel : MonoBehaviour
     [SerializeField] private float counter = 0;
     [SerializeField] private int NewSceneNumber = 1;
 
-    public Vector3 targetPosition = new Vector3(1.0f, 2.0f, 3.0f);
 
-
+    string mostRecentKey = "";
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +37,7 @@ public class ToTabel : MonoBehaviour
         {
             Debug.Log("You have now collected all numbers");
             PlayerPrefs.SetString("TurtleFollow", "You have cleared the maze, and the turtle will now follow you!");
+            PlayerPrefs.SetString("MostRecentKey", "You have cleared the maze, and the turtle will now follow you!");
             Debug.Log("The PlayerPref witht the key TurtleFollow has now been assigned");
             SceneManager.LoadScene(NewSceneNumber);
         }
