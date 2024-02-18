@@ -12,12 +12,11 @@ public class ToTabel : MonoBehaviour
     [SerializeField] private int NewSceneNumber = 1;
 
 
-    string mostRecentKey = "";
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.DeleteKey("TurtleFollow");
+       
         NumberObject = GameObject.FindWithTag("Number");
         Debug.Log("Number found");
 
@@ -31,17 +30,14 @@ public class ToTabel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
+      
         if (counter == 5)
         {
             Debug.Log("You have now collected all numbers");
             PlayerPrefs.SetString("TurtleFollow", "You have cleared the maze, and the turtle will now follow you!");
-            PlayerPrefs.SetString("MostRecentKey", "You have cleared the maze, and the turtle will now follow you!");
-            Debug.Log("The PlayerPref witht the key TurtleFollow has now been assigned");
+            PlayerPrefs.SetString("TurtleRecent", "The turtle was most recently aquired");
             SceneManager.LoadScene(NewSceneNumber);
         }
-
 
     }
 
@@ -80,16 +76,11 @@ public class ToTabel : MonoBehaviour
         {
             Debug.Log("The number is in the machine");
             CheckNumber(Input.gameObject);
-            //if (counter == 5)
-            //{
-            //    SceneManager.LoadScene(NewSceneNumber);
-            //}
         }
         else
         {
             Debug.LogWarning("Object with tag 'Number' not found");
         }
     }
-
 
 }

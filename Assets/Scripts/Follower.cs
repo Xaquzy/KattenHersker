@@ -27,6 +27,7 @@ public class Follower : MonoBehaviour
         Vector3 direction = targetPlayer.position - transform.position;
         direction.y = 0f; // Keep the character upright (if your game is in 3D)
 
+
         if (direction.magnitude > stoppingDistance)
         {
             // Rotate the player towards the target player

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Product/SnakeMinigamePlaceholder.unity
     guid: 2675e8663880fbc4f98105c1bed0d0a3
+  - enabled: 1
+    path: Assets/Scenes/Final Product/HorseMinigamePlaceholder.unity
+    guid: 608e5ab536da2944882b4942b921f1a9
   m_configObjects: {}

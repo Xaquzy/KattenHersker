@@ -54,7 +54,6 @@ public class Movement : MonoBehaviour
         {
 
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
-            transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
             Follower followerScript = Turtle.GetComponent<Follower>();
             PreMinigameCutScene ConvoCutsceneScript = Turtle.GetComponent<PreMinigameCutScene>();
 
@@ -75,18 +74,20 @@ public class Movement : MonoBehaviour
             {
                 Debug.LogError("ConvoCutsceneScript not found on the specified GameObject.");
             }
-
-
+            
+            if (PlayerPrefs.HasKey("TurtleRecent"))
+            {
+                Debug.Log(PlayerPrefs.GetString("TurtleRecent"));
+                transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
+                PlayerPrefs.DeleteKey("TurtleRecent");
+            }
+            
         }
-        else
-        {
-            Debug.Log("No PlayerPref with the key 'TurtleFollow' was found.");
-        }
+        
 
         if (PlayerPrefs.HasKey("SnakeFollow"))
         {
             Debug.Log(PlayerPrefs.GetString("SnakeFollow"));
-            transform.position = new Vector3(35.51369f, -0.59494354f, -13.06677f);
             Follower followerScript = Snake.GetComponent<Follower>();
             PreMinigameCutScene ConvoCutsceneScript = Snake.GetComponent<PreMinigameCutScene>();
 
@@ -108,11 +109,17 @@ public class Movement : MonoBehaviour
                 Debug.LogError("ConvoCutsceneScript not found on the specified GameObject.");
             }
 
+            if (PlayerPrefs.HasKey("SnakeRecent"))
+            {
+                Debug.Log(PlayerPrefs.GetString("SnakeRecent"));
+                transform.position = new Vector3(35.51369f, -0.59494354f, -13.06677f);
+                PlayerPrefs.DeleteKey("SnakeRecent");
+            }
+
         }
         if (PlayerPrefs.HasKey("HorseFollow"))
         {
             Debug.Log(PlayerPrefs.GetString("HorseFollow"));
-            transform.position = new Vector3(11.8979397f, -0.594943464f, -48.1343575f);
             Follower followerScript = Horse.GetComponent<Follower>();
             PreMinigameCutScene ConvoCutsceneScript = Horse.GetComponent<PreMinigameCutScene>();
 
@@ -136,6 +143,12 @@ public class Movement : MonoBehaviour
 
         }
 
+        if (PlayerPrefs.HasKey("HorseRecent"))
+        {
+            Debug.Log(PlayerPrefs.GetString("HorseRecent"));
+            transform.position = new Vector3(-12.0549f, -0.594943464f, -13.16365f);
+            PlayerPrefs.DeleteKey("HorseRecent");
+        }
     }
 
         // Update is called once per frame
