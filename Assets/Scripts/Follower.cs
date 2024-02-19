@@ -29,7 +29,7 @@ public class Follower : MonoBehaviour
     {
         // Calculate the direction from the current player to the target player
         Vector3 direction = targetPlayer.position - transform.position;
-        direction.y = 0f; // Keep the character upright (if your game is in 3D)
+        direction.y = 0f; 
         
         // Rotate the player towards the target player
         Quaternion toRotation = Quaternion.LookRotation(-direction, Vector3.up);
@@ -43,11 +43,13 @@ public class Follower : MonoBehaviour
         }
 
         //Animation
+        if (direction.magnitude <= 0)
         {
-            // Check if the character controller is currently moving
-            bool isMoving = characterController.velocity.magnitude > 0.0000000000000000000000000000000000000001f;
-            // Set the value of the "IsMoving" parameter in the Animator
-            animator.SetBool("Walk", true);
+            animator.SetBool("isMoving", false);
+        }
+        else
+        {
+            animator.SetBool("isMoving", true);
         }
     }
 

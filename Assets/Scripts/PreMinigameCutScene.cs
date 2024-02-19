@@ -44,6 +44,7 @@ public class PreMinigameCutScene : MonoBehaviour
         IEnumerator FinishCut()
         {
             yield return new WaitForSeconds(CutSceneTime);
+            Tekst.SetActive(false);
             SceneManager.LoadScene(NewSceneNumber);
         }
 

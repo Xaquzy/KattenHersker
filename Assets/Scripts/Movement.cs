@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //1
 public class Movement : MonoBehaviour
 {
@@ -33,8 +33,16 @@ public class Movement : MonoBehaviour
     public GameObject Snake;
     public GameObject Horse;
 
-
-
+    IEnumerator FinishCut()
+    {
+        // Check if all followers are acquired
+        if (PlayerPrefs.HasKey("TurtleFollow") && PlayerPrefs.HasKey("SnakeFollow") && PlayerPrefs.HasKey("HorseFollow"))
+        {
+            Debug.Log("All followers acquired!");
+            yield return new WaitForSeconds(0);
+            SceneManager.LoadScene(11);
+        }
+    }
     void Start()
     {
         Animator animator;
@@ -45,8 +53,9 @@ public class Movement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
+        StartCoroutine(FinishCut());
 
-        
+
 
 
 
@@ -129,6 +138,8 @@ public class Movement : MonoBehaviour
         // Update is called once per frame
         void Update()
     {
+        StartCoroutine(FinishCut());
+
         //Grounding
         isGrounded = controller.isGrounded;  
 
