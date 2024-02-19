@@ -13,6 +13,7 @@ public class PreMinigameCutScene : MonoBehaviour
     [SerializeField] private float CutSceneTime = 3f;
     [SerializeField] private int NewSceneNumber = 1;
     [SerializeField] AudioSource dialog;
+
     
     //Animation
     public Animator NPCAnimator;
@@ -26,8 +27,7 @@ public class PreMinigameCutScene : MonoBehaviour
     {
         if (other.CompareTag("PlayerTrigger"))
         {
-            Debug.Log("YAY ITS WORKING LILILILILILILILILILILILI");
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            other.GetComponent<BoxCollider>().enabled = false;
             cutsceneCam.enabled = true;
             MainCam.enabled = false;
             //Player look at the talking npc
@@ -52,6 +52,8 @@ public class PreMinigameCutScene : MonoBehaviour
             yield return new WaitForSeconds(CutSceneTime);
             SceneManager.LoadScene(NewSceneNumber);
         }
+
     }
+    
 }
 

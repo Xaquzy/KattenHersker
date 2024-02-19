@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
 
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
             Follower followerScript = Turtle.GetComponent<Follower>();
-            PreMinigameCutScene ConvoCutsceneScript = Turtle.GetComponent<PreMinigameCutScene>();
+            Turtle.GetComponent<BoxCollider>().enabled = false;
 
             if (followerScript != null)
             {
@@ -66,15 +66,6 @@ public class Movement : MonoBehaviour
                 Debug.LogError("Follower not found on the specified GameObject.");
             }
 
-            if (ConvoCutsceneScript != null)
-            {
-                ConvoCutsceneScript.enabled = false;
-            }
-            else
-            {
-                Debug.LogError("ConvoCutsceneScript not found on the specified GameObject.");
-            }
-            
             if (PlayerPrefs.HasKey("TurtleRecent"))
             {
                 Debug.Log(PlayerPrefs.GetString("TurtleRecent"));
@@ -89,7 +80,7 @@ public class Movement : MonoBehaviour
         {
             Debug.Log(PlayerPrefs.GetString("SnakeFollow"));
             Follower followerScript = Snake.GetComponent<Follower>();
-            PreMinigameCutScene ConvoCutsceneScript = Snake.GetComponent<PreMinigameCutScene>();
+            Snake.GetComponent<BoxCollider>().enabled = false;
 
             if (followerScript != null)
             {
@@ -98,15 +89,6 @@ public class Movement : MonoBehaviour
             else
             {
                 Debug.LogError("Follower not found on the specified GameObject.");
-            }
-
-            if (ConvoCutsceneScript != null)
-            {
-                ConvoCutsceneScript.enabled = false;
-            }
-            else
-            {
-                Debug.LogError("ConvoCutsceneScript not found on the specified GameObject.");
             }
 
             if (PlayerPrefs.HasKey("SnakeRecent"))
@@ -121,7 +103,8 @@ public class Movement : MonoBehaviour
         {
             Debug.Log(PlayerPrefs.GetString("HorseFollow"));
             Follower followerScript = Horse.GetComponent<Follower>();
-            PreMinigameCutScene ConvoCutsceneScript = Horse.GetComponent<PreMinigameCutScene>();
+            Horse.GetComponent<BoxCollider>().enabled = false;
+
 
             if (followerScript != null)
             {
@@ -131,24 +114,16 @@ public class Movement : MonoBehaviour
             {
                 Debug.LogError("Follower not found on the specified GameObject.");
             }
-
-            if (ConvoCutsceneScript != null)
+            
+            if (PlayerPrefs.HasKey("HorseRecent"))
             {
-                ConvoCutsceneScript.enabled = false;
-            }
-            else
-            {
-                Debug.LogError("ConvoCutsceneScript not found on the specified GameObject.");
+                Debug.Log(PlayerPrefs.GetString("HorseRecent"));
+                transform.position = new Vector3(-12.0549f, -0.594943464f, -13.16365f);
+                PlayerPrefs.DeleteKey("HorseRecent");
             }
 
         }
 
-        if (PlayerPrefs.HasKey("HorseRecent"))
-        {
-            Debug.Log(PlayerPrefs.GetString("HorseRecent"));
-            transform.position = new Vector3(-12.0549f, -0.594943464f, -13.16365f);
-            PlayerPrefs.DeleteKey("HorseRecent");
-        }
     }
 
         // Update is called once per frame
