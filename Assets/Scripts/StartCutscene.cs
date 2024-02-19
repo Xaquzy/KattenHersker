@@ -28,6 +28,8 @@ public class StartCutscene : MonoBehaviour
         {
             yield return new WaitForSeconds(CutSceneTime);
             DogAnimator.SetBool("Cry", false);
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             SceneManager.LoadScene(NewSceneNumber);
         }
     } 
