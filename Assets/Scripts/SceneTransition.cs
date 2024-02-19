@@ -32,8 +32,8 @@ public class SceneTransition : MonoBehaviour
     {
         PlayerPrefs.SetString("HorseFollow", "The horse will now follow you!");
         PlayerPrefs.SetString("HorseRecent", "The horse was most recently aquired");
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         SceneManager.LoadScene("PRO - By");
     }
 
@@ -41,8 +41,8 @@ public class SceneTransition : MonoBehaviour
     {
         PlayerPrefs.SetString("SnakeFollow", "The snake will now follow you!");
         PlayerPrefs.SetString("SnakeRecent", "The snake was most recently aquired");
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         SceneManager.LoadScene("PRO - By");
     }
     public void ExitGame()
