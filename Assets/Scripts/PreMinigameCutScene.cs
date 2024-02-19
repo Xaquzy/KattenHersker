@@ -35,10 +35,7 @@ public class PreMinigameCutScene : MonoBehaviour
             player.rotation = Quaternion.LookRotation(lookDirection);
             NPCAnimator.SetBool("Talk", true);
 
-            //player.SetActive(false);
-            //key.SetActive(false);
-            //Disable mouse camera input
-            //Play animation of the cutscene
+
             if (dialog != null)
             {
                 dialog.Play();

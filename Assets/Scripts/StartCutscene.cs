@@ -20,11 +20,6 @@ public class StartCutscene : MonoBehaviour
             Debug.Log("AWAKE!!");
             cutsceneCam.enabled = true;
             DogAnimator.SetBool("Cry", true);
-            //player.SetActive(false);
-            //key.SetActive(false);
-            //Disable mouse camera input
-            //Play animation of the cutscene
-            //dialog.Play();
             StartCoroutine(FinishCut());
         }
 

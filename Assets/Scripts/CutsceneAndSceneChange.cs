@@ -22,9 +22,6 @@ public class CutsceneAndSceneChange : MonoBehaviour
                 cutsceneCam.enabled = true;
                 JaildoorTrigger.position = new Vector3(-100f, -100f, -100f);
                 movement.enabled = true;
-                //key.SetActive(false);
-                //Disable mouse camera input
-                //Play animation of the cutscene
                 dialog.Play();
                 StartCoroutine(FinishCut());
             }
