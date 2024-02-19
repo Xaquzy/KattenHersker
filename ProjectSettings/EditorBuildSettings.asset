@@ -6,33 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Prototype/PRO - Throne.unity
-    guid: fe26beb1fc1bc8945b05cef5b6bf7a84
-  - enabled: 1
-    path: "Assets/Scenes/Prototype/PRO - Cut f\xE6ng.unity"
-    guid: 9e357a74432e2ea48be63d58bc297512
-  - enabled: 1
-    path: "Assets/Scenes/Prototype/PRO - f\xE6ng.unity"
-    guid: ab768fe14f81f2e40825782967bf214a
-  - enabled: 1
-    path: Assets/Scenes/Prototype/PRO - By.unity
-    guid: 2b10c52352beed243bd876f568a9869b
-  - enabled: 1
-    path: Assets/Scenes/Prototype/PRO - Lab.unity
-    guid: 48d87030e40a5a549b53b6d1fa88fe6b
-  - enabled: 1
-    path: Assets/Scenes/Final Product/SnakeMinigamePlaceholder.unity
-    guid: 2675e8663880fbc4f98105c1bed0d0a3
-  - enabled: 1
-    path: Assets/Scenes/Final Product/HorseMinigamePlaceholder.unity
-    guid: 608e5ab536da2944882b4942b921f1a9
-  - enabled: 1
-    path: Assets/Scenes/Final Product/idk.unity
-    guid: 75194dd7331b780408b15d2d616d1216
-  - enabled: 1
-    path: Assets/Scenes/Final Product/Main Menu.unity
+    path: Assets/TheGame/1 - Main Menu.unity
     guid: 68f58daab14bef54b80ac8caa1681f85
   - enabled: 1
-    path: Assets/Scenes/Final Product/Cat on Throne.unity
+    path: Assets/TheGame/2 - Cat on Throne.unity
     guid: 449523f1372ca0e4ab850f91c34404cc
+  - enabled: 1
+    path: "Assets/TheGame/3 - Hundegr\xE5d.unity"
+    guid: d42302c01468c1c44ad35c8ffd34319a
+  - enabled: 1
+    path: "Assets/TheGame/4 - F\xE6ngselsscene.unity"
+    guid: dcc7c45bc5dd32c4b8db7036153d05a1
+  - enabled: 1
+    path: Assets/TheGame/5 - Byen.unity
+    guid: d91128d881604d549a830bdc2724b96e
+  - enabled: 1
+    path: Assets/TheGame/6 - Labyrint.unity
+    guid: 43348cb77f0e2a24c8c9c7d6d8befc1e
+  - enabled: 1
+    path: Assets/TheGame/7 - pt 1 win.unity
+    guid: 8a7f3572fd0a7b24480ddc29cbb31ad8
+  - enabled: 1
+    path: Assets/TheGame/8 - pt 2 win.unity
+    guid: 1ec98218c5d50824cb1c643df8e59c5c
+  - enabled: 1
+    path: Assets/TheGame/9 - Win.unity
+    guid: b2a45752654251a4faad6f131cc616e2
+  - enabled: 1
+    path: Assets/TheGame/HorseMinigame.unity
+    guid: 6e92ee52fe7191349a6f18efacdadf4b
+  - enabled: 1
+    path: Assets/TheGame/SnakeMinigame.unity
+    guid: c0d2fa65e700ad84d9816359230f2e2b
   m_configObjects: {}

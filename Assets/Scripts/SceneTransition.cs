@@ -9,7 +9,7 @@ public class SceneTransition : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("1 - Main Menu");
 
     }
 
@@ -17,14 +17,14 @@ public class SceneTransition : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        SceneManager.LoadScene("Win");
+        SceneManager.LoadScene("9 - Win");
     }
 
     public void LoadNewGame()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        SceneManager.LoadScene("Cat on Throne");
+        SceneManager.LoadScene("2 - Cat on Throne");
     }
 
     
