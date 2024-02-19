@@ -39,7 +39,7 @@ public class Movement : MonoBehaviour
         if (PlayerPrefs.HasKey("TurtleFollow") && PlayerPrefs.HasKey("SnakeFollow") && PlayerPrefs.HasKey("HorseFollow"))
         {
             Debug.Log("All followers acquired!");
-            yield return new WaitForSeconds(0);
+            yield return new WaitForSeconds(3);
             SceneManager.LoadScene(11);
         }
     }
@@ -54,7 +54,6 @@ public class Movement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
         StartCoroutine(FinishCut());
-
 
 
 

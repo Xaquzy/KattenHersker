@@ -7176,9 +7176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneCam: {fileID: 1129321930}
-  DogAnimator: {fileID: 0}
-  CutSceneTime: 1000
-  NewSceneNumber: 1
+  DogAnimator: {fileID: 2003335148}
+  CutSceneTime: 5
+  NewSceneNumber: 6
   dialog: {fileID: 1129321927}
 --- !u!114 &1129321929
 MonoBehaviour:
