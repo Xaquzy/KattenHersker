@@ -10,6 +10,9 @@ public class Follower : MonoBehaviour
     public float stoppingDistance = 2f; // The distance at which the follower stops
     private float rotationSpeed = 5f;   // The speed at which the following player rotates towards the target
     private CharacterController characterController;
+    public Animator animator;
+
+
 
     void Start()
     {
@@ -32,7 +35,6 @@ public class Follower : MonoBehaviour
         Quaternion toRotation = Quaternion.LookRotation(-direction, Vector3.up);
         transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
 
-
         if (direction.magnitude > stoppingDistance)
         {
   
@@ -40,8 +42,14 @@ public class Follower : MonoBehaviour
             characterController.Move(direction.normalized * moveSpeed * Time.deltaTime);
         }
 
-
+        //Animation
+        {
+            // Check if the character controller is currently moving
+            bool isMoving = characterController.velocity.magnitude > 0.0000000000000000000000000000000000000001f;
+            // Set the value of the "IsMoving" parameter in the Animator
+            animator.SetBool("Walk", true);
+        }
     }
-  
 
 }
+  

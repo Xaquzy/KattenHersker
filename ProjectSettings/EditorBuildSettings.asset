@@ -6,36 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TheGame/1 - Main Menu.unity
+    path: Assets/Scenes/TheGame/1 - Main Menu.unity
     guid: 68f58daab14bef54b80ac8caa1681f85
   - enabled: 1
-    path: Assets/TheGame/2 - Cat on Throne.unity
+    path: Assets/Scenes/TheGame/2 - Cat on Throne.unity
     guid: 449523f1372ca0e4ab850f91c34404cc
   - enabled: 1
-    path: "Assets/TheGame/3 - Hundegr\xE5d.unity"
+    path: "Assets/Scenes/TheGame/3 - Hundegr\xE5d.unity"
     guid: d42302c01468c1c44ad35c8ffd34319a
   - enabled: 1
-    path: "Assets/TheGame/4 - F\xE6ngselsscene.unity"
+    path: "Assets/Scenes/TheGame/4 - F\xE6ngselsscene.unity"
     guid: dcc7c45bc5dd32c4b8db7036153d05a1
   - enabled: 1
-    path: Assets/TheGame/5 - Byen.unity
+    path: Assets/Scenes/TheGame/5 - Byen.unity
     guid: d91128d881604d549a830bdc2724b96e
   - enabled: 1
-    path: Assets/TheGame/6 - Labyrint.unity
+    path: Assets/Scenes/TheGame/6 - Labyrint.unity
     guid: 43348cb77f0e2a24c8c9c7d6d8befc1e
   - enabled: 1
-    path: Assets/TheGame/7 - pt 1 win.unity
+    path: Assets/Scenes/TheGame/7 - pt 1 win.unity
     guid: 8a7f3572fd0a7b24480ddc29cbb31ad8
   - enabled: 1
-    path: Assets/TheGame/8 - pt 2 win.unity
+    path: Assets/Scenes/TheGame/8 - pt 2 win.unity
     guid: 1ec98218c5d50824cb1c643df8e59c5c
   - enabled: 1
-    path: Assets/TheGame/9 - Win.unity
+    path: Assets/Scenes/TheGame/9 - Win.unity
     guid: b2a45752654251a4faad6f131cc616e2
   - enabled: 1
-    path: Assets/TheGame/HorseMinigame.unity
+    path: Assets/Scenes/TheGame/HorseMinigame.unity
     guid: 6e92ee52fe7191349a6f18efacdadf4b
   - enabled: 1
-    path: Assets/TheGame/SnakeMinigame.unity
+    path: Assets/Scenes/TheGame/SnakeMinigame.unity
     guid: c0d2fa65e700ad84d9816359230f2e2b
   m_configObjects: {}

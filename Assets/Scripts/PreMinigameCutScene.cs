@@ -10,6 +10,7 @@ public class PreMinigameCutScene : MonoBehaviour
     public Transform LookTarget;
     public CinemachineFreeLook cutsceneCam;
     public CinemachineFreeLook MainCam;
+    public GameObject Tekst;
     [SerializeField] private float CutSceneTime = 3f;
     [SerializeField] private int NewSceneNumber = 1;
     [SerializeField] AudioSource dialog;
@@ -25,6 +26,7 @@ public class PreMinigameCutScene : MonoBehaviour
             other.GetComponent<BoxCollider>().enabled = false;
             cutsceneCam.enabled = true;
             MainCam.enabled = false;
+            Tekst.SetActive(true);
             //Player look at the talking npc
             Vector3 lookDirection = LookTarget.position - player.position;
             player.rotation = Quaternion.LookRotation(lookDirection);

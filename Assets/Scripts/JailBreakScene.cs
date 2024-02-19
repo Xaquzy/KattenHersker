@@ -20,6 +20,8 @@ public class JailBreakScene : MonoBehaviour
             {
                 this.gameObject.GetComponent<BoxCollider>().enabled = false;
                 cutsceneCam.enabled = true;
+                JaildoorTrigger.position = new Vector3(100f, 100f, 100f);
+                movement.enabled = true;
                 dialog.Play();
                 StartCoroutine(FinishCut());
             }

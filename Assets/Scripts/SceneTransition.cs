@@ -34,7 +34,7 @@ public class SceneTransition : MonoBehaviour
         PlayerPrefs.SetString("HorseRecent", "The horse was most recently aquired");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        SceneManager.LoadScene("PRO - By");
+        SceneManager.LoadScene("5 - Byen");
     }
 
     public void SnakeMinigame()
@@ -43,7 +43,7 @@ public class SceneTransition : MonoBehaviour
         PlayerPrefs.SetString("SnakeRecent", "The snake was most recently aquired");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        SceneManager.LoadScene("PRO - By");
+        SceneManager.LoadScene("5 - Byen");
     }
     public void ExitGame()
     {
