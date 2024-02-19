@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Follower : MonoBehaviour
 {
@@ -26,13 +27,15 @@ public class Follower : MonoBehaviour
         // Calculate the direction from the current player to the target player
         Vector3 direction = targetPlayer.position - transform.position;
         direction.y = 0f; // Keep the character upright (if your game is in 3D)
+        
+        // Rotate the player towards the target player
+        Quaternion toRotation = Quaternion.LookRotation(-direction, Vector3.up);
+        transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
 
 
         if (direction.magnitude > stoppingDistance)
         {
-            // Rotate the player towards the target player
-            Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
-            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+  
             // Move the player towards the target player
             characterController.Move(direction.normalized * moveSpeed * Time.deltaTime);
         }
