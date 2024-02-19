@@ -40,11 +40,13 @@ public class PreMinigameCutScene : MonoBehaviour
             StartCoroutine(FinishCut());
         }
 
-        //Scenechange after 10s of cut scene
+        //Scenechange after x seconds of cutscene
         IEnumerator FinishCut()
         {
             yield return new WaitForSeconds(CutSceneTime);
             Tekst.SetActive(false);
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             SceneManager.LoadScene(NewSceneNumber);
         }
 

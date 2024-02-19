@@ -13,8 +13,9 @@ public class ToTabel : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
-    void Start()
+
+// Start is called before the first frame update
+void Start()
     {
        
         NumberObject = GameObject.FindWithTag("Number");
@@ -24,6 +25,7 @@ public class ToTabel : MonoBehaviour
         {
             Debug.LogError("GameObject with tag 'Number' not found.");
         }
+
 
     }
 
