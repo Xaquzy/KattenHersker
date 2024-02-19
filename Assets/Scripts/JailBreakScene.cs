@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CutsceneAndSceneChange : MonoBehaviour
+public class JailBreakScene : MonoBehaviour
 {
     public Transform JaildoorTrigger;
     public Camera cutsceneCam;
