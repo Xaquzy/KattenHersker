@@ -20,21 +20,16 @@ public class CutsceneAndSceneChange : MonoBehaviour
             {
                 this.gameObject.GetComponent<BoxCollider>().enabled = false;
                 cutsceneCam.enabled = true;
-                JaildoorTrigger.position = new Vector3(-100f, -100f, -100f);
-                movement.enabled = true;
                 dialog.Play();
                 StartCoroutine(FinishCut());
             }
 
-            //Scenechange after 10s of cut scene
+            //Scenechange efter x sekunder af cutscene
             IEnumerator FinishCut()
             {
-                
                 yield return new WaitForSeconds(CutSceneTime);
                 SceneManager.LoadScene(NewSceneNumber);
-                
             }
-            
         }  
     }
 }

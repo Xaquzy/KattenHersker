@@ -23,7 +23,7 @@ public class StartCutscene : MonoBehaviour
             StartCoroutine(FinishCut());
         }
 
-        //Scenechange after x seconds of cut scene
+        //Scenechange efter x sekunder af cutscene
         IEnumerator FinishCut()
         {
             yield return new WaitForSeconds(CutSceneTime);
