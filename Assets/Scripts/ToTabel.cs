@@ -11,26 +11,7 @@ public class ToTabel : MonoBehaviour
     [SerializeField] private float counter = 0;
     [SerializeField] private int NewSceneNumber = 1;
 
-
-
-
-// Start is called before the first frame update
-void Start()
-    {
-       
-        NumberObject = GameObject.FindWithTag("Number");
-        Debug.Log("Number found");
-
-        if (NumberObject == null)
-        {
-            Debug.LogError("GameObject with tag 'Number' not found.");
-        }
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
+        void Update()
     {
       
         if (counter == 5)

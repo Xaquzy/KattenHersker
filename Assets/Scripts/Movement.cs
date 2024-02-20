@@ -147,16 +147,6 @@ public class Movement : MonoBehaviour
             velocity.y = -1;
         }
 
-        ////Sprinting
-        //if (Input.GetKeyDown(KeyCode.LeftShift))
-        //{
-        //    trueSpeed = sprintSpeed;
-        //}
-        //if (Input.GetKeyUp(KeyCode.LeftShift))
-        //{
-        //    trueSpeed = walkSpeed;
-        //}
-
 
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector3 direction = new Vector3(movement.x, 0, movement.y).normalized;
