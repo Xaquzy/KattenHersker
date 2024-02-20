@@ -10,7 +10,6 @@ public class Movement : MonoBehaviour
     CharacterController controller;
     float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
-    
 
     //Animation
     public Animator PlayerAnimator;
@@ -194,6 +193,7 @@ public class Movement : MonoBehaviour
     }
     private void OnApplicationQuit()
     {
+        Debug.Log("SLET");
         PlayerPrefs.DeleteAll();
     }
 }
