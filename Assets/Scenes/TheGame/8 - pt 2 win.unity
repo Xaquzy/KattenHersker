@@ -2888,7 +2888,7 @@ GameObject:
   - component: {fileID: 365479304}
   - component: {fileID: 365479303}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Main Camera (1)
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3008,7 +3008,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 666b95e1bf1904b4aa32da56de057c63, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 48a3d9178e5688847b522cf94d866aff, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3108,7 +3108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutsceneCam: {fileID: 365479308}
   DogAnimator: {fileID: 80176072}
-  CutSceneTime: 7
+  CutSceneTime: 3
   NewSceneNumber: 8
   dialog: {fileID: 365479305}
 --- !u!114 &365479307
@@ -7792,7 +7792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075023417}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.051264316, y: 0.93308055, z: -0.3239231, w: 0.14767008}
+  m_LocalRotation: {x: 0.051264312, y: 0.93308055, z: -0.32392308, w: 0.1476701}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

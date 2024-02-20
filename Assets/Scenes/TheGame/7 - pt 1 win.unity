@@ -3061,7 +3061,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6cc22f5d8af5a9548946a76eb45291c9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 48a3d9178e5688847b522cf94d866aff, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3161,7 +3161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutsceneCam: {fileID: 365479308}
   DogAnimator: {fileID: 80176072}
-  CutSceneTime: 14
+  CutSceneTime: 10
   NewSceneNumber: 7
   dialog: {fileID: 365479305}
 --- !u!114 &365479307
@@ -9205,7 +9205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267712243}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04586635, y: 0.9442312, z: -0.2898152, w: 0.14943492}
+  m_LocalRotation: {x: 0.04586636, y: 0.9442312, z: -0.2898152, w: 0.14943491}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
