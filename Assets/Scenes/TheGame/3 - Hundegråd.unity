@@ -15835,7 +15835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Katten har taget over!
+  m_text: 'Katten Har taget oVEr!
 
     Saml alle dyrene og tag magten tilbage fra
     katten!'
