@@ -17,7 +17,7 @@ public class ToTabel : MonoBehaviour
         if (counter == 5)
         {
             Debug.Log("You have now collected all numbers");
-            PlayerPrefs.SetString("TurtleFollow", "You have cleared the maze, and the turtle will now follow you!");
+            PlayerPrefs.SetInt("TurtleFollow", 1);
             PlayerPrefs.SetString("TurtleRecent", "The turtle was most recently aquired");
             SceneManager.LoadScene(NewSceneNumber);
         }

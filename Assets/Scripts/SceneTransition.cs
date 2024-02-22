@@ -30,7 +30,7 @@ public class SceneTransition : MonoBehaviour
     
     public void HorseMinigame()
     {
-        PlayerPrefs.SetString("HorseFollow", "The horse will now follow you!");
+        PlayerPrefs.SetInt("HorseFollow", 1);
         PlayerPrefs.SetString("HorseRecent", "The horse was most recently aquired");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
@@ -39,7 +39,7 @@ public class SceneTransition : MonoBehaviour
 
     public void SnakeMinigame()
     {
-        PlayerPrefs.SetString("SnakeFollow", "The snake will now follow you!");
+        PlayerPrefs.SetInt("SnakeFollow", 1);
         PlayerPrefs.SetString("SnakeRecent", "The snake was most recently aquired");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;

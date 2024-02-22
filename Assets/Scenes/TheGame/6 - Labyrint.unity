@@ -17649,7 +17649,6 @@ GameObject:
   - component: {fileID: 543450651617093177}
   - component: {fileID: 919132147882081412}
   - component: {fileID: 919132147882081414}
-  - component: {fileID: 919132147882081413}
   m_Layer: 0
   m_Name: Boks
   m_TagString: Untagged
@@ -17671,27 +17670,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 3
   NewSceneNumber: 4
---- !u!65 &919132147882081413
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147882081411}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 7.34, y: 13.51, z: 9}
-  m_Center: {x: 43.6, y: 0, z: 42.44}
 --- !u!65 &919132147882081414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17711,8 +17689,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8.7, y: 13.51, z: 9.59}
-  m_Center: {x: 43.6, y: 0, z: 42.1}
+  m_Size: {x: 9.974643, y: 13.509998, z: 8.797565}
+  m_Center: {x: 41.326736, y: 0, z: 38.835365}
 --- !u!1 &919132149230006372
 GameObject:
   m_ObjectHideFlags: 0

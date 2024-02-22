@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
     IEnumerator FinishCut()
     {
         // Check if all followers are acquired
-        if (PlayerPrefs.HasKey("TurtleFollow") && PlayerPrefs.HasKey("SnakeFollow") && PlayerPrefs.HasKey("HorseFollow"))
+        if (PlayerPrefs.GetInt("TurtleFollow") == 1 && PlayerPrefs.GetInt("SnakeFollow") ==1 && PlayerPrefs.GetInt("HorseFollow")==1)
         {
             Debug.Log("All followers acquired!");
             yield return new WaitForSeconds(3);
@@ -55,9 +55,11 @@ public class Movement : MonoBehaviour
         StartCoroutine(FinishCut());
 
 
+        Debug.Log("Turtle: " + PlayerPrefs.GetInt("TurtleFollow"));
+        Debug.Log("Snake: " + PlayerPrefs.GetInt("SnakeFollow"));
+        Debug.Log("Horse: " + PlayerPrefs.GetInt("HorseFollow"));
 
-
-        if (PlayerPrefs.HasKey("TurtleFollow"))
+        if (PlayerPrefs.GetInt("TurtleFollow") == 1)
         {
 
             Debug.Log(PlayerPrefs.GetString("TurtleFollow"));
@@ -83,7 +85,7 @@ public class Movement : MonoBehaviour
         }
         
 
-        if (PlayerPrefs.HasKey("SnakeFollow"))
+        if (PlayerPrefs.GetInt("SnakeFollow") == 1)
         {
             Debug.Log(PlayerPrefs.GetString("SnakeFollow"));
             Follower followerScript = Snake.GetComponent<Follower>();
@@ -106,7 +108,7 @@ public class Movement : MonoBehaviour
             }
 
         }
-        if (PlayerPrefs.HasKey("HorseFollow"))
+        if (PlayerPrefs.GetInt("HorseFollow") == 1)
         {
             Debug.Log(PlayerPrefs.GetString("HorseFollow"));
             Follower followerScript = Horse.GetComponent<Follower>();
