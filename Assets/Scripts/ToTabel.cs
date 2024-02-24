@@ -8,13 +8,14 @@ using UnityEngine.SceneManagement;
 public class ToTabel : MonoBehaviour
 {
     private GameObject NumberObject;
-    [SerializeField] private float counter = 0;
+    private int counter = 0;
     [SerializeField] private int NewSceneNumber = 1;
+    [SerializeField] private int antalTalManSkalFinde;
 
         void Update()
     {
       
-        if (counter == 5)
+        if (counter == antalTalManSkalFinde)
         {
             Debug.Log("You have now collected all numbers");
             PlayerPrefs.SetInt("TurtleFollow", 1);
