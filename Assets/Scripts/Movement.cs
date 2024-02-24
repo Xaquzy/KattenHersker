@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
     bool isGrounded;
     Vector3 velocity;
     public int JumpAmount = 1;
+    private int counter;
 
 
     public GameObject Turtle;
@@ -166,13 +167,13 @@ public class Movement : MonoBehaviour
         //Jumping (max doublejump)
         if (isGrounded)
         {
-            JumpAmount = 2;
+            counter = JumpAmount;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && JumpAmount > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && counter > 0)
         {
             velocity.y = Mathf.Sqrt((jumpHeight * 10) * -2f * gravity);
-            JumpAmount = JumpAmount - 1;
+            counter = counter - 1;
         }
 
 
